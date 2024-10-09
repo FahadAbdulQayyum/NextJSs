@@ -2,7 +2,9 @@ import React from 'react'
 
 const Button = ({ children }: any) => {
     return (
-        <div>
+        <div
+            className="bg-orange-400"
+        >
             <button>{children}</button>
         </div>
     )
