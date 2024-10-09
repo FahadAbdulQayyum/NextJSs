@@ -21,6 +21,9 @@ function MobileDrawer({ isOpen, onClose }: any) {
                 <li className="text-3xl hover:text-blue-900 hover:font-semibold">
                     <Link href="/ContactUs">Contact Us</Link>
                 </li>
+                <li className="text-3xl hover:text-blue-900 hover:font-semibold">
+                    <Link href="/Services">Services</Link>
+                </li>
             </ul>
         </div>
     );
