@@ -1,5 +1,5 @@
+import Navbar from './components/Navbar/navbar'
 import './globals.css'
-import Navbar from './Navbar/page'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
 
