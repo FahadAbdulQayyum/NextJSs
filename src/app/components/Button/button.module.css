@@ -10,3 +10,17 @@
     /* transition-duration: 5ms; */
     /* transform: rotate3d('180deg'); */
 }
+
+
+/* .show:hover { */
+/* .show { */
+.exacthide {
+    visibility: hidden;
+    /* visibility: block; */
+}
+
+/* .show { */
+.show:hover .exacthide {
+    /* visibility: hidden; */
+    visibility: visible;
+}
