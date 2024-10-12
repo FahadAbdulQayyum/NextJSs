@@ -25,7 +25,7 @@ const Navbar = () => {
                 <CustomButton>
                     <a href="/contact">Contact</a>
                 </CustomButton>
-                <CustomButton subNav={true} sub={[{ name: 'Service0', link: '/services0' }, { name: 'Service1', link: '/services1' }, { name: 'Service2', link: '/services2' }, { name: 'Service0', link: '/services0' }]}>
+                <CustomButton subNav={true} sub={[{ name: 'Service0', link: '/services0' }, { name: 'Service1', link: '/services1' }, { name: 'Service2', link: '/services2' }, { name: 'Service3', link: '/services3' }]}>
                     <a href="/services">Service</a>
                 </CustomButton>
                 <CustomButton>
