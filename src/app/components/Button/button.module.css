@@ -1,0 +1,12 @@
+.fahad .rotate {
+    transition: transform 0.5s ease-in-out;
+}
+
+/* .p-2.text-yellow-50:hover .rotate { */
+/* .p-2 .text-yellow-50:hover { */
+.fahad:hover .rotate {
+    /* transform: rotate('180deg') translate; */
+    transform: rotate(180deg);
+    /* transition-duration: 5ms; */
+    /* transform: rotate3d('180deg'); */
+}
