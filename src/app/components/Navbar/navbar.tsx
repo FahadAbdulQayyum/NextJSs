@@ -2,7 +2,6 @@ import React from 'react'
 import CustomButton from '../Button/button'
 import Image from 'next/image'
 import Logo from '../../assets/flogo.png'
-import { IoIosArrowDown } from 'react-icons/io'
 
 const Navbar = () => {
     return (
@@ -26,11 +25,20 @@ const Navbar = () => {
                 <CustomButton>
                     <a href="/contact">Contact</a>
                 </CustomButton>
-                <CustomButton subNav={true}>
+                <CustomButton subNav={true} sub={[{ name: 'Service0', link: '/services0' }, { name: 'Service1', link: '/services1' }, { name: 'Service2', link: '/services2' }, { name: 'Service0', link: '/services0' }]}>
                     <a href="/services">Service</a>
-                    {/* <span>
-                        <IoIosArrowDown />
-                    </span> */}
+                    {/* <CustomButton subNav={true} sub={true}>
+                        <a href="/services">Service0</a>
+                    </CustomButton>
+                    <CustomButton subNav={true} sub={true}>
+                        <a href="/services">Service1</a>
+                    </CustomButton>
+                    <CustomButton subNav={true} sub={true}>
+                        <a href="/services">Service2</a>
+                    </CustomButton> */}
+                </CustomButton>
+                <CustomButton>
+                    <a href="/contact">More</a>
                 </CustomButton>
             </span>
             <span>

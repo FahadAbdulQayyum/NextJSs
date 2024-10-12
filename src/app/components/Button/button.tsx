@@ -1,31 +1,17 @@
 "use client"
-import React, { useState } from 'react'
 import cssStyle from './button.module.css'
-import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
+import { IoIosArrowUp } from 'react-icons/io'
 
-const CustomButton = ({ children, disabled, subNav }: any) => {
-    const [direction, setDirection] = useState(false)
+const CustomButton = ({ children, disabled, subNav, sub }: any) => {
 
-    const handleHover = () => {
-        setDirection(true)
-    }
-
-    const rehandleHover = () => {
-        setDirection(false)
-    }
+    console.log('children...', children)
 
     return (
         <div
-            // className="p-2 text-yellow-50 hover:border-b-2 hover:border-t-2 hover:border-t-transparent hover:pt-[5px] hover:cursor-pointer duration-300 translate-x-1"
-            // className={`p-2 text-yellow-50 ${!disabled ? 'hover:border-b-2 hover:border-t-2 hover:border-t-transparent hover:pt-[5px]' : ''} hover:cursor-pointer duration-300 translate-x-1 flex items-center`}
-            // className={`p-2 text-yellow-50 ${!disabled ? 'hover:border-b-2 hover:border-t-2 hover:border-t-transparent hover:pt-[5px]' : ''} hover:cursor-pointer duration-300 translate-x-1 flex items-center ${cssStyle.fahad}`}
-            className={`p-2 text-yellow-50 ${!disabled ? 'hover:border-b-2 hover:border-t-2 hover:border-t-transparent hover:pt-[5px]' : ''} hover:cursor-pointer duration-300 translate-x-1 flex items-center ${cssStyle.fahad} ${subNav ? 'space-x-1' : ''}`}
-        // className={`p-2 text-yellow-50 ${!disabled ? 'hover:border-b-2 hover:border-t-2 hover:border-t-transparent hover:pt-[5px]' : ''} hover:cursor-pointer duration-300 translate-x-1 flex items-center ${subNav ? 'space-x-1' : ''} hover:${direction} duration-1000`}
-        // onMouseEnter={handleHover}
-        // onMouseLeave={rehandleHover}
+            // className={`p-2 text-yellow-50 ${!disabled ? 'hover:border-b-2 hover:border-t-2 hover:border-t-transparent hover:pt-[5px]' : ''} hover:cursor-pointer duration-300 translate-x-1 flex items-center ${cssStyle.fahad} ${subNav ? 'space-x-1' : ''} ${sub ? 'hidden hover:block' : ''}`}
+            className={`p-2 text-yellow-50 ${!disabled ? 'hover:border-b-2 hover:border-t-2 hover:border-t-transparent hover:pt-[5px]' : ''} hover:cursor-pointer duration-300 translate-x-1 flex items-center ${cssStyle.fahad} ${subNav ? 'space-x-1' : ''} `}
         >
             {children}
-            {/* {subNav && (direction ? <IoIosArrowDown /> : <IoIosArrowUp />)} */}
             {subNav &&
                 <span
                     className={cssStyle.rotate}
@@ -33,6 +19,9 @@ const CustomButton = ({ children, disabled, subNav }: any) => {
                     <IoIosArrowUp />
                 </span>
             }
+            {sub && <div
+                className="invisible hover:visible fixed top-10 flex flex-col"
+            >{sub.map((v: any) => <span>{v.name}</span>)}</div>}
         </div >
     )
 }
