@@ -18,8 +18,10 @@ const CustomButton = ({ children, disabled, subNav, sub }: any) => {
                 </span>
             }
             {sub && <div
-                className={`fixed top-10 flex flex-col ${cssStyle.exacthide}`}
-            >{sub.map((v: any) => <span>{v.name}</span>)}</div>}
+                className={`fixed top-9 -left-4 flex flex-col ${cssStyle.exacthide} space-y-2 bg-slate-900`}
+            >{sub.map((v: any) => <span
+                className="hover:bg-slate-700 px-5 p-2"
+            >{v.name}</span>)}</div>}
         </div >
     )
 }
