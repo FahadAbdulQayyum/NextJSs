@@ -12,15 +12,31 @@
 }
 
 
-/* .show:hover { */
-/* .show { */
-.exacthide {
+/* .exacthide {
     visibility: hidden;
-    /* visibility: block; */
+
+    transition: transform 0.5s ease-in-out;
+
 }
 
-/* .show { */
 .show:hover .exacthide {
-    /* visibility: hidden; */
     visibility: visible;
+
+    transition: step-start;
+} */
+
+.exacthide {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    /* Start slightly above */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.show:hover .exacthide {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    /* Move to its original position */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
