@@ -2,28 +2,9 @@
     transition: transform 0.5s ease-in-out;
 }
 
-/* .p-2.text-yellow-50:hover .rotate { */
-/* .p-2 .text-yellow-50:hover { */
 .fahad:hover .rotate {
-    /* transform: rotate('180deg') translate; */
     transform: rotate(180deg);
-    /* transition-duration: 5ms; */
-    /* transform: rotate3d('180deg'); */
 }
-
-
-/* .exacthide {
-    visibility: hidden;
-
-    transition: transform 0.5s ease-in-out;
-
-}
-
-.show:hover .exacthide {
-    visibility: visible;
-
-    transition: step-start;
-} */
 
 .exacthide {
     visibility: hidden;
