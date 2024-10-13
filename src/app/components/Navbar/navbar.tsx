@@ -29,15 +29,15 @@ const Navbar = () => {
                     <a href="/services">Service</a>
                 </CustomButton>
                 <CustomButton>
-                    <a href="/contact">Moree</a>
+                    <a href="/contact">More</a>
                 </CustomButton>
             </span>
             <span>
-                <CustomButton>
+                <CustomButton btn={true}>
                     <a href="/">Login</a>
                 </CustomButton>
             </span>
-        </div>
+        </div >
     )
 }
 
