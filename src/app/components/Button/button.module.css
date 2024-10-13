@@ -6,6 +6,24 @@
     transform: rotate(180deg);
 }
 
+.exacthidemobile {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    /* Start slightly above */
+    transition: transform 0.5s ease-in-out, opacity 0.1s ease-in-out;
+}
+
+.show:hover .exacthidemobile {
+    visibility: visible;
+    opacity: 1;
+    /* margin-bottom: 10px; */
+    transform: translateY(0);
+    /* Move to its original position */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    /* transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; */
+}
+
 .exacthide {
     visibility: hidden;
     opacity: 0;
