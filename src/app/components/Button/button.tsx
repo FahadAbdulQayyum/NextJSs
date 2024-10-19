@@ -3,12 +3,17 @@
 import cssStyle from './button.module.css'
 import { IoIosArrowUp } from 'react-icons/io'
 
-const CustomButton = ({ children, disabled, subNav, sub, btn }: any) => {
+const CustomButton = ({ children, disabled, subNav, sub, btn, desktop, onClickFunction, open, btnState }: any) => {
 
     return (
         <div
-            className={`p-2 text-yellow-50 ${!disabled ? 'hover:border-b-2 hover:border-t-2 hover:border-t-transparent hover:pt-[5px]' : ''} hover:cursor-pointer duration-1000 translate-x-1 flex items-center ${cssStyle.fahad} ${subNav ? 'space-x-1 hover:pb-48' : ''} ${cssStyle.show} ${btn && 'bg-blue-400 rounded-lg px-5 font-bold hover:bg-orange-950'}`}
-        // className={`p-2 text-yellow-50 ${!disabled ? 'hover:border-b-2 hover:border-t-2 hover:border-t-transparent hover:pt-[5px]' : ''} hover:cursor-pointer duration-1000 translate-x-1 flex items-center ${cssStyle.fahad} ${subNav ? 'space-x-1' : ''} ${cssStyle.show} ${btn && 'bg-blue-400 rounded-lg px-5 font-bold hover:bg-orange-950'} hover:pb-48`}
+            // className={`p-2 text-yellow-50 ${!disabled ? 'hover:border-b-2 hover:border-t-2 hover:border-t-transparent hover:pt-[5px]' : ''} hover:cursor-pointer duration-1000 translate-x-1 flex items-center ${cssStyle.fahad} ${subNav ? 'space-x-1 hover:pb-48' : ''} ${desktop ? 'hover:pb-2' : ''} ${cssStyle.show} ${btn && 'bg-blue-400 rounded-lg px-5 font-bold hover:bg-orange-950'}`}
+            className={`p-2 text-yellow-50 ${!disabled ? 'hover:border-b-2 hover:border-t-2 hover:border-t-transparent hover:pt-[5px]' : ''} hover:cursor-pointer duration-1000 translate-x-1 flex items-center ${cssStyle.fahad} ${subNav ? 'space-x-1 hover:pb-48' : ''} ${desktop ? 'hover:pb-2' : ''} ${cssStyle.show} ${btn && 'bg-blue-400 rounded-lg px-5 font-bold hover:bg-orange-950'}`}
+            // className={`p-2 text-yellow-50 ${!disabled ? 'hover:border-b-2 hover:border-t-2 hover:border-t-transparent hover:pt-[5px]' : ''} hover:cursor-pointer duration-1000 translate-x-1 flex items-center ${cssStyle.fahad} ${subNav ? 'space-x-1' : ''} ${cssStyle.show} ${btn && 'bg-blue-400 rounded-lg px-5 font-bold hover:bg-orange-950'} hover:pb-48`}
+            // onClick={() => onClickF('ff')}
+            // onClick={() => onClickFunction('ff')}
+            onClick={onClickFunction}
+        // onClick={() => open && console.log('....kii')}
         >
             {children}
             {subNav &&

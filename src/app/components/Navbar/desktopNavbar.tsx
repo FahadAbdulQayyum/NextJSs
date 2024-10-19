@@ -1,12 +1,13 @@
 import React from 'react'
 import CustomButton from '../Button/button'
 import Image from 'next/image'
-import Logo from '../../assets/flogo.png'
+// import Logo from '../../assets/flogo.png'
+import Logo from '../../assets/logo_0.png'
 
 const DesktopNavbar = () => {
     return (
         <div
-            className="bg-slate-500 py-2 text-sm flex items-center justify-between"
+            className="px-6 bg-slate-500 py-2 text-sm flex items-center justify-between"
         >
             <span>
                 <CustomButton disabled={true}>
@@ -25,7 +26,7 @@ const DesktopNavbar = () => {
                 <CustomButton>
                     <a href="/contact">Contact</a>
                 </CustomButton>
-                <CustomButton subNav={true} sub={[{
+                <CustomButton subNav={true} desktop={true} sub={[{
                     name: 'Service0', link: '/services0', subsub: [{
                         name: 'Service0', link: '/services0',
                     }, {
